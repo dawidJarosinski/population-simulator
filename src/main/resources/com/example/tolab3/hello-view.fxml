@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.tolab3.HelloController" prefHeight="600" prefWidth="600">
+    <children>
+        <Pane fx:id="pane" prefWidth="20" prefHeight="20"
+              minHeight="20" minWidth="20"
+              maxHeight="20" maxWidth="20"
+              scaleX="20" scaleY="20"
+              layoutY="300" layoutX="300"
+              style="-fx-border-color: black; -fx-border-width: 0.1px; -fx-background-color: white;"/>
+
+        <Label text="Timer:" layoutX="50" layoutY="50" style="-fx-font-weight: bold;"/>
+        <Label fx:id="timerLabel" text="0.0" layoutX="100" layoutY="50" style="-fx-font-size: 14;"/>
+
+        <Button fx:id="startButton" text="Start" layoutX="50" layoutY="600" onAction="#startSimulation"/>
+        <Button fx:id="stopButton" text="Stop" layoutX="120" layoutY="600" onAction="#stopSimulation"/>
+        <Button fx:id="stepButton" text="Step" layoutX="190" layoutY="600" onAction="#stepSimulation"/>
+        <Button fx:id="resetButton" text="Reset" layoutX="260" layoutY="600" onAction="#resetSimulation"/>
+
+        <Label text="Back:" layoutX="50" layoutY="700"/>
+        <TextField fx:id="backField" layoutX="100" layoutY="700" prefWidth="50"/>
+        <Button fx:id="backButton" text="Set" layoutX="160" layoutY="700" onAction="#setBackValue"/>
+
+        <Label fx:id="statusLabel" text="Simulation Controller" layoutX="50" layoutY="20"/>
+    </children>
+</AnchorPane>
